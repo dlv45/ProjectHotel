@@ -1,0 +1,21 @@
+.booking-container {
+  &__form {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  &__form-input {
+    margin: 1%;
+  }
+  &__form-label {
+    margin: 2%;
+  }
+  &__form-group-btn {
+    display: flex;
+    gap: 20px;
+    margin: 2%;
+  }
+}
+label {
+  font-weight: 700;
+}

@@ -1,0 +1,203 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  flex-flow: row nowrap;
+  padding: 10px 50px 10px 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+
+  &__menu-toggle {
+    display: none;
+  }
+
+  &__menu-left {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__menu-right {
+    width: 16%;
+  }
+
+  &__logo {
+    margin-left: 10%;
+  }
+
+  &__logo img {
+    width: 100px;
+    height: 100%;
+    cursor: pointer;
+    margin-right: -50%;
+  }
+  &__menu {
+    margin-right: 2%;
+  }
+
+  &__menu-ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+    line-height: 16px;
+    font-style: normal;
+  }
+
+  &__menu-li {
+    margin-right: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    gap: 30px;
+  }
+
+  &__menu-btn {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: -3px;
+  }
+  &__menu-user {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+  }
+  .btn-user {
+    margin-top: 7%;
+  }
+  a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #8e0000;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-size: large;
+  }
+
+  &__menu-li:first-child {
+    margin-right: auto;
+  }
+}
+
+.booking-header {
+  animation: nhap-nhay 1s ease infinite;
+  color: #dad334 !important;
+}
+@keyframes nhap-nhay {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+
+    &__logo {
+      margin-left: 0;
+      margin-right: 10px;
+    }
+
+    &__menu {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .header__menu-ul {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .header__menu-btn,
+    .header__menu-user {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 10%;
+    }
+
+    .header__menu-user .ant-btn {
+      margin-left: 10px;
+    }
+
+    .header__menu-icon {
+      font-size: 24px;
+    }
+  }
+
+  .header__menu-btn,
+  .header__menu-user {
+    display: none;
+  }
+
+  .header__menu-toggle {
+    display: block;
+  }
+
+  .header__menu-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+  .hi-user {
+    display: none;
+  }
+
+  .header__menu-ul {
+    display: none;
+    /* Hiển thị các menu items khi showMenu là true */
+    &.show-menu {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  }
+
+  .header__menu-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+  }
+
+  .header__menu-user {
+    position: relative;
+  }
+
+  .header__menu-ul--user {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    list-style-type: none;
+    width: 150px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}

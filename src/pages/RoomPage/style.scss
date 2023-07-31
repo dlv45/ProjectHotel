@@ -1,0 +1,23 @@
+.hotel-room-container {
+  display: block;
+}
+
+.hotel-room-layout {
+  display: flex;
+  height: auto;
+  padding: 76px 10% 7px 10%;
+  gap: 20px;
+  &__filter {
+    background-color: #f0f0f0;
+    width: 25%;
+    height: auto;
+  }
+  &__detail {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: #ffffff;
+    gap: 20px;
+    height: 100%;
+  }
+}
