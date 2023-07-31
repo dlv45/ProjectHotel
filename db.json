@@ -1,0 +1,77 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Vĩ Đỗ",
+      "email": "abc@gmail.com"
+    },
+    {
+      "email": "vidottco55@gmail.com",
+      "password": "vido0405",
+      "validPassword": "vido0405",
+      "id": 2
+    },
+    {
+      "email": "vidottco55@gmail.com",
+      "password": "vido0405",
+      "validPassword": "vido0405",
+      "id": 3
+    },
+    {
+      "email": "xyz@gmail.com",
+      "password": "123123",
+      "validPassword": "123123",
+      "id": 4
+    },
+    {
+      "email": "vidottco55@gmail.com",
+      "password": "vido0405",
+      "validPassword": "vido0405",
+      "id": 5
+    },
+    {
+      "email": "vidottco00@gmail.com",
+      "password": "12345678",
+      "confirmPassword": "12345678",
+      "id": 6
+    },
+    {
+      "email": "123@gmail.com",
+      "password": "1231231123",
+      "confirmPassword": "1231231123",
+      "id": 7
+    },
+    {
+      "email": "ashudahs@gmail.com",
+      "password": "123123123",
+      "confirmPassword": "123123123",
+      "id": 8
+    }
+  ],
+  "rooms": [
+    {
+      "id": 1,
+      "name": "Standard",
+      "guest": "2",
+      "bed": "1.6M",
+      "price": "500,000vnd",
+      "status": ""
+    },
+    {
+      "id": 2,
+      "name": "Superior",
+      "guest": "4",
+      "bed": "2M",
+      "price": "1,000,000vnd",
+      "status": ""
+    },
+    {
+      "id": 3,
+      "name": "Deluxe",
+      "guest": "4",
+      "bed": "2M",
+      "price": "1,500,000vnd",
+      "status": ""
+    }
+  ]
+}

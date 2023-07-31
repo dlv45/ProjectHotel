@@ -1,0 +1,40 @@
+.account-info-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 78%;
+  gap: 20px;
+  border: 2px solid #ccc;
+  padding: 20px;
+  margin: 80px 10% 20px 10%;
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    width: 50%;
+  }
+
+  &__user-avatar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__user-form {
+    display: flex;
+
+    label {
+      min-width: 115px;
+    }
+  }
+}

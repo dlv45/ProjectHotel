@@ -1,0 +1,17 @@
+.booking-page-container {
+  display: block;
+  padding: 80px 10% 10% 10%;
+
+  &__title {
+    color: rgb(142, 0, 0);
+  }
+
+  &__room {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  @media only screen and (max-width: 768px) {
+    padding-top: 15% !important;
+  }
+}
