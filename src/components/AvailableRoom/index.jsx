@@ -1,26 +1,11 @@
-import "./style.scss";
-import React, { useState } from "react";
+import React from "react";
 import { Row, Col, Button } from "antd";
-import room1 from "../../images/room1.jpg";
-import RoomPopup from "../RoomPopUp";
+import "./style.scss";
+import { formatNumber } from "../../utils/formatNumber";
 
-const AvailableRoom = () => {
+const AvailableRoom = ({ room, onShowPopup }) => {
   const borderStyle = {
     border: "1px solid #ccc",
-  };
-
-  const [isModalVisible, setIsModalVisible] = useState(false);
-
-  const showModal = () => {
-    setIsModalVisible(true);
-  };
-
-  const handleOk = () => {
-    setIsModalVisible(false);
-  };
-
-  const handleCancel = () => {
-    setIsModalVisible(false);
   };
 
   return (
@@ -28,25 +13,22 @@ const AvailableRoom = () => {
       <Row>
         <Col span={24} sm={7}>
           <img
-            src={room1}
-            alt="Phòng khách sạn"
+            src={room.thumnail}
+            alt={room.name}
             className="available-room__img"
           />
         </Col>
         <Col span={24} sm={10} style={borderStyle}>
           <div className="available-room__details">
             <div className="available-room__title">
-              <h2>Phòng Deluxe</h2>
+              <h2>{room.name}</h2>
             </div>
             <div className="available-room__description">
               <div>
-                <p>Số khách: 2</p>
-                <p>Chiều dài giường: 2m</p>
+                <p>Số khách: {room.guest}</p>
+                <p>Chiều dài giường: {room.bed}</p>
               </div>
-              <i>
-                Chú ý: Giá trên đã bao gồm phí VAT. Nếu ở ghép thêm 1 người,
-                khách sạn phụ thu thêm 100.000 VND/khách.
-              </i>
+              <i>{room.description}</i>
             </div>
           </div>
         </Col>
@@ -64,7 +46,9 @@ const AvailableRoom = () => {
         >
           <div className="available-room__price">
             <div className="available-room__title">
-              <h2 style={{ marginLeft: "-2%" }}>500,000VND/ĐÊM</h2>
+              <h2 style={{ marginLeft: "-2%" }}>
+                {formatNumber(room.price)}VNĐ/đêm
+              </h2>
             </div>
           </div>
           <div className="available-room__group-btn">
@@ -72,24 +56,18 @@ const AvailableRoom = () => {
               type="primary"
               style={{ backgroundColor: "rgb(142, 0, 0)" }}
             >
-              Đặt Phòng
+              Đặt phòng
             </Button>
             <Button
               type="primary"
               style={{ backgroundColor: "rgb(142, 0, 0)" }}
-              onClick={showModal}
+              onClick={onShowPopup}
             >
               Xem Chi Tiết
             </Button>
           </div>
         </Col>
       </Row>
-      <RoomPopup
-        isModalVisible={isModalVisible}
-        handleOk={handleOk}
-        handleCancel={handleCancel}
-        roomImage={room1}
-      />
     </div>
   );
 };

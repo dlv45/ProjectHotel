@@ -46,32 +46,193 @@
       "password": "123123123",
       "confirmPassword": "123123123",
       "id": 8
+    },
+    {
+      "email": "xyz1@gmail.com",
+      "password": "123123123",
+      "confirmPassword": "123123123",
+      "id": 9
     }
   ],
   "rooms": [
     {
       "id": 1,
-      "name": "Standard",
-      "guest": "2",
+      "class": "standard",
+      "name": "Phòng 101",
+      "guest": 2,
       "bed": "1.6M",
-      "price": "500,000vnd",
-      "status": ""
+      "price": 500000,
+      "available": true,
+      "description": "",
+      "thumnail": "https://huecorner.asia/wp-content/uploads/2023/03/hue-corner-house4-1-2048x1367.jpg",
+      "imgs": [
+        "https://huecorner.asia/wp-content/uploads/2023/03/hue-corner-house4-1-2048x1367.jpg",
+        "https://huecorner.asia/wp-content/uploads/2023/03/BAO-2-2048x1367.jpg",
+        "https://huecorner.asia/wp-content/uploads/2023/03/BAO-3-2048x1367.jpg",
+        "https://huecorner.asia/wp-content/uploads/2023/03/BAO-2-2048x1367.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "class": "standard",
+      "name": "Phòng 102",
+      "guest": 2,
+      "bed": "1.6M",
+      "price": 500000,
+      "available": true,
+      "thumnail": "https://huecorner.asia/wp-content/uploads/2023/03/hue-corner-house4-1-2048x1367.jpg",
+      "imgs": [
+        "https://huecorner.asia/wp-content/uploads/2023/03/hue-corner-house4-1-2048x1367.jpg",
+        "https://huecorner.asia/wp-content/uploads/2023/03/BAO-2-2048x1367.jpg",
+        "https://huecorner.asia/wp-content/uploads/2023/03/BAO-3-2048x1367.jpg",
+        "https://huecorner.asia/wp-content/uploads/2023/03/BAO-2-2048x1367.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "class": "standard",
+      "name": "Phòng 103",
+      "guest": 2,
+      "bed": "1.6M",
+      "price": 500000,
+      "available": true,
+      "thumnail": "https://huecorner.asia/wp-content/uploads/2023/03/hue-corner-house4-1-2048x1367.jpg",
+      "imgs": [
+        "https://huecorner.asia/wp-content/uploads/2023/03/hue-corner-house4-1-2048x1367.jpg",
+        "https://huecorner.asia/wp-content/uploads/2023/03/BAO-2-2048x1367.jpg",
+        "https://huecorner.asia/wp-content/uploads/2023/03/BAO-3-2048x1367.jpg",
+        "https://huecorner.asia/wp-content/uploads/2023/03/BAO-2-2048x1367.jpg"
+      ]
     },
     {
       "id": 2,
-      "name": "Superior",
-      "guest": "4",
+      "class": "superior",
+      "name": "Phòng 201",
+      "guest": 4,
       "bed": "2M",
-      "price": "1,000,000vnd",
-      "status": ""
+      "price": 1000000,
+      "available": true,
+      "thumnail": "https://huecorner.asia/wp-content/uploads/2023/03/326797409_501384435473804_5966251805181792771_n-1.jpg",
+      "imgs": [
+        "https://huecorner.asia/wp-content/uploads/2023/03/326797409_501384435473804_5966251805181792771_n-1.jpg",
+        "https://huecorner.asia/wp-content/uploads/2023/03/326284642_686131526329740_7364444900710711964_n.jpg",
+        "https://huecorner.asia/wp-content/uploads/2023/03/326797409_501384435473804_5966251805181792771_n-1.jpg",
+        "https://huecorner.asia/wp-content/uploads/2023/03/326284642_686131526329740_7364444900710711964_n.jpg"
+      ]
+    },
+    {
+      "id": 7,
+      "class": "superior",
+      "name": "Phòng 202",
+      "guest": 4,
+      "bed": "2M",
+      "price": 1000000,
+      "available": true,
+      "thumnail": "https://huecorner.asia/wp-content/uploads/2023/03/326797409_501384435473804_5966251805181792771_n-1.jpg",
+      "imgs": [
+        "https://huecorner.asia/wp-content/uploads/2023/03/326797409_501384435473804_5966251805181792771_n-1.jpg",
+        "https://huecorner.asia/wp-content/uploads/2023/03/326284642_686131526329740_7364444900710711964_n.jpg",
+        "https://huecorner.asia/wp-content/uploads/2023/03/326797409_501384435473804_5966251805181792771_n-1.jpg",
+        "https://huecorner.asia/wp-content/uploads/2023/03/326284642_686131526329740_7364444900710711964_n.jpg"
+      ]
+    },
+    {
+      "id": 8,
+      "class": "superior",
+      "name": "Phòng 203",
+      "guest": 4,
+      "bed": "2M",
+      "price": 1000000,
+      "available": true,
+      "thumnail": "https://huecorner.asia/wp-content/uploads/2023/03/326797409_501384435473804_5966251805181792771_n-1.jpg",
+      "imgs": [
+        "https://huecorner.asia/wp-content/uploads/2023/03/326797409_501384435473804_5966251805181792771_n-1.jpg",
+        "https://huecorner.asia/wp-content/uploads/2023/03/326284642_686131526329740_7364444900710711964_n.jpg",
+        "https://huecorner.asia/wp-content/uploads/2023/03/326797409_501384435473804_5966251805181792771_n-1.jpg",
+        "https://huecorner.asia/wp-content/uploads/2023/03/326284642_686131526329740_7364444900710711964_n.jpg"
+      ]
     },
     {
       "id": 3,
-      "name": "Deluxe",
-      "guest": "4",
+      "class": "deluxe",
+      "name": "Phòng 301",
+      "guest": 4,
       "bed": "2M",
-      "price": "1,500,000vnd",
-      "status": ""
+      "price": 1500000,
+      "available": true,
+      "thumnail": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/296510839.jpg?k=76cdc1d82baf568f5b024ab926fcec968d020416b652517207b1ebde2bb8578d&o=&hp=1",
+      "imgs": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/296510839.jpg?k=76cdc1d82baf568f5b024ab926fcec968d020416b652517207b1ebde2bb8578d&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/296510821.jpg?k=33d2c139a5f34d873af58d4220381201221630b6cac2dd77a86fc06ba160018b&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/296510823.jpg?k=e5a86a74f9585a57d7c6c2d62eb9f51347678b0ba5894f6ca164e7f34e8a81c8&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/296510830.jpg?k=1dcaefd98d85fb891b34e58583fdf5cb834b08aa9fbed8128632dd1605466955&o=&hp=1"
+      ]
+    },
+    {
+      "id": 9,
+      "class": "deluxe",
+      "name": "Phòng 302",
+      "guest": 4,
+      "bed": "2M",
+      "price": 1500000,
+      "available": true,
+      "thumnail": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/296510839.jpg?k=76cdc1d82baf568f5b024ab926fcec968d020416b652517207b1ebde2bb8578d&o=&hp=1",
+      "imgs": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/296510839.jpg?k=76cdc1d82baf568f5b024ab926fcec968d020416b652517207b1ebde2bb8578d&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/296510821.jpg?k=33d2c139a5f34d873af58d4220381201221630b6cac2dd77a86fc06ba160018b&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/296510823.jpg?k=e5a86a74f9585a57d7c6c2d62eb9f51347678b0ba5894f6ca164e7f34e8a81c8&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/296510830.jpg?k=1dcaefd98d85fb891b34e58583fdf5cb834b08aa9fbed8128632dd1605466955&o=&hp=1"
+      ]
+    },
+
+    {
+      "id": 10,
+      "class": "deluxe",
+      "name": "Phòng 303",
+      "guest": 4,
+      "bed": "2M",
+      "price": 1500000,
+      "available": true,
+      "thumnail": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/296510839.jpg?k=76cdc1d82baf568f5b024ab926fcec968d020416b652517207b1ebde2bb8578d&o=&hp=1",
+      "imgs": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/296510839.jpg?k=76cdc1d82baf568f5b024ab926fcec968d020416b652517207b1ebde2bb8578d&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/296510821.jpg?k=33d2c139a5f34d873af58d4220381201221630b6cac2dd77a86fc06ba160018b&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/296510823.jpg?k=e5a86a74f9585a57d7c6c2d62eb9f51347678b0ba5894f6ca164e7f34e8a81c8&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/296510830.jpg?k=1dcaefd98d85fb891b34e58583fdf5cb834b08aa9fbed8128632dd1605466955&o=&hp=1"
+      ]
+    },
+    {
+      "id": 4,
+      "class": "apartment",
+      "name": "Căn hộ 1",
+      "guest": 6,
+      "bed": "2M",
+      "price": 2000000,
+      "available": true,
+      "thumnail": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/296510832.jpg?k=169f6ed276a1404a69439fb83d27510e9754846465acc37194831b1891342987&o=&hp=1",
+      "imgs": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/296510832.jpg?k=169f6ed276a1404a69439fb83d27510e9754846465acc37194831b1891342987&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/329015311.jpg?k=89fae46d16c79a5d0192be1a09ad18fda34c00de977bc997eeff6f860b9ae85f&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/296510837.jpg?k=bcf33ccde99c9f1d4c7bf0f5ea82b023f4d8c98516de21402d353dfb85578d45&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/329015305.jpg?k=d4d61fd429e6968b76373b7270f3967ebfd329ccc4118015d038c5fe81e6a766&o=&hp=1"
+      ]
+    },
+    {
+      "id": 11,
+      "class": "apartment",
+      "name": "Căn hộ 2",
+      "guest": 6,
+      "bed": "2M",
+      "price": 2000000,
+      "available": true,
+      "thumnail": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/296510832.jpg?k=169f6ed276a1404a69439fb83d27510e9754846465acc37194831b1891342987&o=&hp=1",
+      "imgs": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/296510832.jpg?k=169f6ed276a1404a69439fb83d27510e9754846465acc37194831b1891342987&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/329015311.jpg?k=89fae46d16c79a5d0192be1a09ad18fda34c00de977bc997eeff6f860b9ae85f&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/296510837.jpg?k=bcf33ccde99c9f1d4c7bf0f5ea82b023f4d8c98516de21402d353dfb85578d45&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/329015305.jpg?k=d4d61fd429e6968b76373b7270f3967ebfd329ccc4118015d038c5fe81e6a766&o=&hp=1"
+      ]
     }
-  ]
+  ],
+  "bookings": []
 }

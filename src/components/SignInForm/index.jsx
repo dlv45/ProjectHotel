@@ -37,6 +37,7 @@ const SignInForm = () => {
 
   const onValid = (formValue) => {
     dispatch(actCreateNewUser(formValue));
+    delete formValue.confirmPassword;
   };
 
   return (

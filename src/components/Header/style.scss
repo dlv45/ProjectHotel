@@ -23,7 +23,7 @@
     align-items: center;
   }
   &__menu-right {
-    width: 16%;
+    width: 17%;
   }
 
   &__logo {
@@ -73,7 +73,7 @@
     position: relative;
   }
   .btn-user {
-    margin-top: 7%;
+    margin-top: 10px;
   }
   a {
     text-decoration: none;
@@ -103,6 +103,9 @@
   100% {
     opacity: 1;
   }
+}
+.hi-user p {
+  margin: 0;
 }
 
 /* Responsive */

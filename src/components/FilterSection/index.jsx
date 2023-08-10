@@ -1,16 +1,31 @@
 import React from "react";
 import { Select, Button } from "antd";
 import "./style.scss";
+import { useDispatch } from "react-redux";
+import {
+  filterGuest,
+  filterPrice,
+  updateFilterRoom,
+} from "../../Redux/features/RoomSlice";
 
 const { Option } = Select;
 
 const FilterSection = () => {
-  const priceOptions = [
-    { label: "Dưới 500.000 VND", value: "500000" },
-    { label: "500.000 - 1.000.000 VND", value: "1000000" },
-    { label: "1.000.000 - 2.000.000 VND", value: "2000000" },
-    { label: "Trên 2.000.000 VND", value: "2000000+" },
-  ];
+  const dispatch = useDispatch();
+
+  const handleChangeRoomType = (value) => {
+    dispatch(updateFilterRoom(value));
+  };
+
+  const handleChangeSortPrice = (value) => {
+    dispatch(filterPrice(value));
+  };
+
+  const handleChangSortGuest = (value) => {
+    const updateValue = value.split("-");
+    dispatch(filterGuest(updateValue));
+  };
+
   return (
     <div className="filter-section">
       <div className="filter-title">
@@ -18,32 +33,41 @@ const FilterSection = () => {
       </div>
       <div className="filter-item">
         <label>Hạng phòng:</label>
-        <Select style={{ width: "100%" }} placeholder="Chọn hạng phòng">
+        <Select
+          style={{ width: "100%" }}
+          placeholder="Chọn hạng phòng"
+          onChange={handleChangeRoomType}
+        >
           <Option value="standard">Standard</Option>
-          <Option value="deluxe">Superior</Option>
-          <Option value="suite">Deluxe</Option>
+          <Option value="superior">Superior</Option>
+          <Option value="deluxe">Deluxe</Option>
+          <Option value="apartment">Apartment</Option>
         </Select>
       </div>
       <div className="filter-item">
-        <label>Giá phòng:</label>
-        {/* Thêm selector cho giá phòng */}
-        <Select defaultValue="all" style={{ width: "100%" }}>
-          <Option value="all">Tất cả</Option>
-          {priceOptions.map((option) => (
-            <Option key={option.value} value={option.value}>
-              {option.label}
-            </Option>
-          ))}
+        <label>Sắp xếp giá:</label>
+        <Select
+          defaultValue="asc"
+          style={{ width: "100%" }}
+          onChange={handleChangeSortPrice}
+        >
+          <Option value="desc">Giảm dần</Option>
+          <Option value="asc">Tăng dần</Option>
         </Select>
       </div>
+
       <div className="filter-item">
         <label>Số lượng khách:</label>
-        <Select style={{ width: "100%" }} placeholder="Chọn số lượng khách">
-          <Option value="2">1-2</Option>
-          <Option value="4">2-4</Option>
-          <Option value="6">4-6</Option>
-          <Option value="8">6-8</Option>
-          <Option value="10">8-10</Option>
+        <Select
+          style={{ width: "100%" }}
+          placeholder="Chọn số lượng khách"
+          onChange={handleChangSortGuest}
+        >
+          <Option value="1-2">1-2</Option>
+          <Option value="2-4">2-4</Option>
+          <Option value="4-6">4-6</Option>
+          <Option value="6-8">6-8</Option>
+          <Option value="8-10">8-10</Option>
         </Select>
       </div>
       <Button

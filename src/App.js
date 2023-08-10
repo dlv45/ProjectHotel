@@ -4,7 +4,6 @@ import MainLayout from "./layouts/MainLayout";
 import HomePage from "./pages/HomePage";
 import { ROUTES } from "./constants/routes";
 import IntroducePage from "./pages/IntroducePage";
-import ServicePage from "./pages/ServicePage";
 import ContactPage from "./pages/ContactPage";
 import BookingPage from "./pages/BookingPage";
 import LoginPage from "./pages/LoginPage";
@@ -25,7 +24,6 @@ function App() {
           <Route path={ROUTES.HOME_PAGE} element={<HomePage />} />
           <Route path={ROUTES.INTRODUCE_PAGE} element={<IntroducePage />} />
           <Route path={ROUTES.ROOM_PAGE} element={<RoomPage />} />
-          <Route path={ROUTES.SERVICE_PAGE} element={<ServicePage />} />
           <Route path={ROUTES.CONTACT_PAGE} element={<ContactPage />} />
           <Route path={ROUTES.BOOKING_PAGE} element={<BookingPage />} />
           <Route path={ROUTES.LOGIN_PAGE} element={<LoginPage />} />

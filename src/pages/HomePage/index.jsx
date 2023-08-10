@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 /* eslint-disable jsx-a11y/heading-has-content */
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useState } from "react";
+import React from "react";
 import "./style.scss";
 import { Button, Col, Row } from "antd";
 import banner from "../../images/banner-home.jpg";
@@ -12,22 +12,8 @@ import promo3 from "../../images/promo3.png";
 import room1 from "../../images/room1.jpg";
 import room2 from "../../images/room2.jpg";
 import room3 from "../../images/room3.jpg";
-import RoomPopup from "../../components/RoomPopUp";
 
 const HomePage = () => {
-  const [isModalVisible, setIsModalVisible] = useState(false);
-
-  const showModal = () => {
-    setIsModalVisible(true);
-  };
-
-  const handleOk = () => {
-    setIsModalVisible(false);
-  };
-
-  const handleCancel = () => {
-    setIsModalVisible(false);
-  };
   return (
     <div className="home-page-container">
       <div className="home-page-container__banner">
@@ -126,10 +112,7 @@ const HomePage = () => {
           <div className="home-page-container__section__service-main-item">
             <Row>
               <Col span={24} sm={8}>
-                <div
-                  className="home-page-container__section__service-item"
-                  onClick={showModal}
-                >
+                <div className="home-page-container__section__service-item">
                   <img
                     src={room1}
                     className="home-page-container__section__service-item-img"
@@ -141,10 +124,7 @@ const HomePage = () => {
               </Col>
 
               <Col span={24} sm={8}>
-                <div
-                  className="home-page-container__section__service-item"
-                  onClick={showModal}
-                >
+                <div className="home-page-container__section__service-item">
                   <img
                     src={room2}
                     className="home-page-container__section__service-item-img"
@@ -156,10 +136,7 @@ const HomePage = () => {
               </Col>
 
               <Col span={24} sm={8}>
-                <div
-                  className="home-page-container__section__service-item"
-                  onClick={showModal}
-                >
+                <div className="home-page-container__section__service-item">
                   <img
                     src={room3}
                     className="home-page-container__section__service-item-img"
@@ -170,12 +147,6 @@ const HomePage = () => {
                 </div>
               </Col>
             </Row>
-            <RoomPopup
-              isModalVisible={isModalVisible}
-              handleOk={handleOk}
-              handleCancel={handleCancel}
-              roomImage={room1}
-            />
           </div>
         </div>
         <div className="home-page-container__section__utilities">
