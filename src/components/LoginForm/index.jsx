@@ -36,7 +36,6 @@ const LoginForm = () => {
 
   const onValid = (formValue) => {
     const { email, password } = formValue;
-    // navigate(ROUTES.BOOKING_PAGE);
     dispatch(actLoginUser({ email, password, handleLoginSuccess }));
   };
 
@@ -44,51 +43,53 @@ const LoginForm = () => {
     navigate(ROUTES.SIGNIN_PAGE);
   };
   return (
-    <div className="login-form">
-      <label>Địa chỉ Email:</label>
-      <Controller
-        control={control}
-        name="email"
-        render={({ field }) => {
-          return <Input placeholder="Nhập Email" {...field} />;
-        }}
-      />
-      {!!errors.email?.message && (
-        <i style={{ color: "red" }} className="valid">
-          {errors.email?.message}
-        </i>
-      )}
+    <div className="login-form-wrapper">
+      <form className="login-form-container" onSubmit={handleSubmit(onValid)}>
+        <label>Địa chỉ Email:</label>
+        <Controller
+          control={control}
+          name="email"
+          render={({ field }) => {
+            return <Input placeholder="Nhập Email" {...field} />;
+          }}
+        />
+        {!!errors.email?.message && (
+          <i style={{ color: "red" }} className="valid">
+            {errors.email?.message}
+          </i>
+        )}
 
-      <label>Mật khẩu:</label>
-      <Controller
-        control={control}
-        name="password"
-        render={({ field }) => {
-          return <Input.Password placeholder="Nhập mật khẩu" {...field} />;
-        }}
-      />
-      {!!errors.password?.message && (
-        <i style={{ color: "red" }} className="valid">
-          {errors.password?.message}
-        </i>
-      )}
+        <label>Mật khẩu:</label>
+        <Controller
+          control={control}
+          name="password"
+          render={({ field }) => {
+            return <Input.Password placeholder="Nhập mật khẩu" {...field} />;
+          }}
+        />
+        {!!errors.password?.message && (
+          <i style={{ color: "red" }} className="valid">
+            {errors.password?.message}
+          </i>
+        )}
 
-      <Divider />
+        <Divider />
 
-      <Button
-        type="primary"
-        block
-        style={{ backgroundColor: "rgb(142, 0, 0)" }}
-        onClick={handleSubmit(onValid)}
-      >
-        Đăng Nhập
-      </Button>
+        <Button
+          type="primary"
+          block
+          style={{ backgroundColor: "rgb(142, 0, 0)" }}
+          onClick={handleSubmit(onValid)}
+        >
+          Đăng Nhập
+        </Button>
 
-      <Divider />
+        <Divider />
 
-      <Button block onClick={handleToSignIn}>
-        Đăng ký
-      </Button>
+        <Button block onClick={handleToSignIn}>
+          Đăng ký
+        </Button>
+      </form>
     </div>
   );
 };

@@ -7,9 +7,9 @@ export const RoomAPIs = {
     });
     return response;
   },
-  getRoomById: async (RoomId) => {
+  getRoomById: async (roomId) => {
     const response = await axios.get(
-      `${process.env.REACT_APP_BE_URL}tasks/${RoomId}`
+      `${process.env.REACT_APP_BE_URL}rooms/${roomId}`
     );
     return response.data;
   },

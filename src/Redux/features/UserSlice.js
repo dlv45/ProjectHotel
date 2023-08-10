@@ -109,7 +109,6 @@ const userSlice = createSlice({
     });
     builder.addCase(actLoginUser.fulfilled, (state, action) => {
       state.isLoading = false;
-      console.log("SUCCESS");
       globalNavigate(ROUTES.BOOKING_PAGE);
     });
   },

@@ -1,0 +1,51 @@
+.contact-page-container {
+  padding: 80px 10% 40px 10%;
+
+  &__info {
+    padding: 20px;
+  }
+
+  &__info-title {
+    color: rgb(142, 0, 0);
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  &__info-add {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  &__info-map {
+    height: 450px;
+    overflow: hidden;
+  }
+
+  &__contact {
+    padding: 20px;
+    padding-top: 70px;
+  }
+
+  &__contact-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(142, 0, 0);
+    font-size: 16px;
+  }
+
+  &__contact-content-item {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  &__contact-fb {
+    height: 450px;
+    overflow: hidden;
+  }
+
+  .facebook-iframe-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+}

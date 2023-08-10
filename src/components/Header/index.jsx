@@ -63,8 +63,6 @@ const Header = () => {
     }
   };
 
-  console.log(isLoggedIn, "isLoggedIn");
-
   const menu = (
     <Menu onClick={handleMenuClick}>
       <Menu.Item key="accountInfo" icon={<UserOutlined />}>
@@ -73,7 +71,9 @@ const Header = () => {
       <Menu.Item key="bookingInfo" icon={<ApartmentOutlined />}>
         Thông tin đặt phòng
       </Menu.Item>
-      <Menu.Item key="logout">Đăng Xuất</Menu.Item>
+      <Menu.Item key="logout">
+        <span>Đăng Xuất</span>
+      </Menu.Item>
     </Menu>
   );
 
@@ -119,13 +119,6 @@ const Header = () => {
             }`}
           >
             <Link to={ROUTES.ROOM_PAGE}>PHÒNG NGHỈ</Link>
-          </li>
-          <li
-            className={`header__menu-li ${
-              ROUTES.SERVICE_PAGE.includes(location.pathname) ? "active" : ""
-            }`}
-          >
-            <Link to={ROUTES.SERVICE_PAGE}>DỊCH VỤ</Link>
           </li>
           <li
             className={`header__menu-li ${
@@ -180,7 +173,9 @@ const Header = () => {
               </Button>
             </Dropdown>
             <div className="hi-user">
-              <p>Chào {userInfo.email},</p>
+              <p>
+                Chào <i>{userInfo.email}</i>
+              </p>
             </div>
             {showMenu && (
               <ul className="header__menu-ul--user">

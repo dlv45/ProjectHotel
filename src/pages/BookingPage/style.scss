@@ -1,7 +1,15 @@
 .booking-page-container {
-  display: block;
-  padding: 80px 10% 10% 10%;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 10% 40px 10%;
+  gap: 20px;
+  background-color: rgba(0, 0, 0, 0.0509803922);
+  &__form {
+    margin-left: -4%;
+    width: 95%;
+  }
   &__title {
     color: rgb(142, 0, 0);
   }

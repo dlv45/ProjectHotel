@@ -2,7 +2,6 @@ export const ROUTES = {
   HOME_PAGE: "/home-page",
   INTRODUCE_PAGE: "/introduce-page",
   ROOM_PAGE: "/room-page",
-  SERVICE_PAGE: "/service-page",
   CONTACT_PAGE: "/contact-page",
   BOOKING_PAGE: "/booking-page",
   LOGIN_PAGE: "/login-page",

@@ -2,17 +2,13 @@ import React, { useState } from "react";
 import { Avatar, Upload, Button, message, Input } from "antd";
 import { UserOutlined, UploadOutlined } from "@ant-design/icons";
 import "./style.scss";
+import { useSelector } from "react-redux";
 
 const AccountInfoPage = () => {
   const [avatarURL, setAvatarURL] = useState(null);
-  const [userInfo, setUserInfo] = useState({
-    fullName: "Nguyễn Văn A",
-    email: "nguyenvana@gmail.com",
-    phoneNumber: "0123456789",
-  });
+  const { userInfo } = useSelector((state) => state.user);
 
   const handleAvatarChange = (info) => {
-    console.log(info);
     if (info.file.status === "done") {
       setAvatarURL(info.file.response.url);
       message.success(`${info.file.name} tải lên thành công.`);
@@ -25,17 +21,12 @@ const AccountInfoPage = () => {
     setAvatarURL(null);
   };
 
-  const handleFieldChange = (field, value) => {
-    setUserInfo((prevUserInfo) => ({
-      ...prevUserInfo,
-      [field]: value,
-    }));
+  const handleFieldChange = (fieldName, value) => {
+    // Cập nhật thông tin người dùng dựa trên fieldName và value
   };
 
   const handleSave = () => {
-    // Gửi thông tin tài khoản mới lên API (nếu có)
-    // Sau khi thành công, bạn có thể cập nhật thông tin tài khoản lưu trữ từ API vào state userInfo
-
+    // Lưu thông tin người dùng và hiển thị thông báo thành công
     message.success("Thông tin tài khoản đã được lưu.");
   };
 
@@ -54,47 +45,42 @@ const AccountInfoPage = () => {
         <Upload
           name="avatar"
           showUploadList={false}
-          action="https://www.mocky.io/v2/5cc8019d300000980a055e76" // URL API xử lý việc tải lên hình ảnh
+          action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
           onChange={handleAvatarChange}
         >
           {avatarURL ? (
-            <Button onClick={handleRemoveAvatar}>Remove</Button>
+            <Button type="link" onClick={handleRemoveAvatar} htmlType="button">
+              Remove
+            </Button>
           ) : (
-            <Button icon={<UploadOutlined />}>Tải ảnh lên</Button>
+            <Button type="primary" icon={<UploadOutlined />} htmlType="button">
+              Tải ảnh lên
+            </Button>
           )}
         </Upload>
       </div>
       <div className="account-info-page__user-info">
         <div className="account-info-page__user-form">
-          <label>Họ và tên:</label>
-          <Input
-            placeholder="Nhập họ và tên"
-            value={userInfo.fullName}
-            onChange={(e) => handleFieldChange("fullName", e.target.value)}
-          />
-        </div>
-        <div className="account-info-page__user-form">
           <label>Email:</label>
           <Input
             type="email"
-            placeholder="Nhập email"
-            value={userInfo.email}
+            value={userInfo?.email || ""}
             onChange={(e) => handleFieldChange("email", e.target.value)}
           />
         </div>
         <div className="account-info-page__user-form">
-          <label>Số điện thoại:</label>
-          <Input
+          <label>Mật khẩu:</label>
+          <Input.Password
             type="tel"
-            placeholder="Nhập số điện thoại"
-            value={userInfo.phoneNumber}
-            onChange={(e) => handleFieldChange("phoneNumber", e.target.value)}
+            value={userInfo?.password || null}
+            onChange={() => {}}
+            disabled
           />
         </div>
       </div>
       <div className="account-info-page__btn">
         <Button type="primary" onClick={handleSave}>
-          Save
+          Lưu
         </Button>
       </div>
     </div>
